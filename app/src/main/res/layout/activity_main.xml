@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/main_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stopwatch"
+        android:textColor="@color/white"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:textSize="32sp"
+        android:fontFamily="@font/arial_bold_mt"/>
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:text="00:00:000"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/arial_bold_mt"/>
+
+    <!-- Container for the buttons -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:fontFamily="@font/arial_bold_mt"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:fontFamily="@font/arial_bold_mt"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/btnStart"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:fontFamily="@font/arial_bold_mt"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/btnPause"/>
+    </RelativeLayout>
+</RelativeLayout>
+
